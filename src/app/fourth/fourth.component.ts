@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NgStyle} from "@angular/common";
 
 @Component({
@@ -11,10 +11,12 @@ import {NgStyle} from "@angular/common";
   styleUrl: './fourth.component.css'
 })
 export class FourthComponent {
+  @Input("value")
   borderRadius = 0;
-  borderRadiusStyle = "border-radius:" + this.borderRadius + "%";
+  // borderRadiusStyle = "border-radius:" + this.borderRadius + "%";
 
-  updateValue(value: number) {
-    this.borderRadius = value;
-  }
+
+  // updateValue(value: number) {
+  //   this.borderRadius = value;
+  // }
 }

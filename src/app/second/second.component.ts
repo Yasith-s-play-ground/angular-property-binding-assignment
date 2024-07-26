@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-second',
@@ -8,9 +8,14 @@ import {Component} from '@angular/core';
   styleUrl: './second.component.css'
 })
 export class SecondComponent {
+  @Output("update")
+  emitter: EventEmitter<number> = new EventEmitter<number>();
+
+  @Input("value")
   secondCompRangeValue = 10;
 
   updateValue(value: number) {
-    this.secondCompRangeValue = value
+    this.secondCompRangeValue = value;
+    this.emitter.emit(value);
   }
 }

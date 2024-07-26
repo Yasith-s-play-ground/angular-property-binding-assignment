@@ -1,17 +1,17 @@
 <body>
 <header class="flex flex-col items-center w-full">
-  <h1 class="flex justify-center text-center text-4xl font-bold">{{ value/100 | percent :'2.2-2'}}</h1>
+  <h1 class="flex justify-center text-center text-4xl font-bold">{{ parentValue / 100 | percent :'2.2-2' }}</h1>
   <div id="progress-bar-container" class="w-5/6 min-h-3 border-sky-500 border-2">
     <div id="progress-bar" class="bg-blue-800 border-black min-h-3"
-         [style]="progressBarWidth"></div>
+         [style.width.%]="parentValue"></div>
   </div>
 </header>
 <div class="flex justify-center gap-x-20 mt-5">
-  <app-first/>
-  <app-second/>
+  <app-first [value]="parentValue" (update)="parentValue=$event"/>
+  <app-second [value]="parentValue" (update)="parentValue=$event"/>
 </div>
 <div class="flex justify-center gap-x-20 mt-5">
-  <app-fourth/>
-  <app-third/>
+  <app-fourth [value]="parentValue"/>
+  <app-third [value]="parentValue" (update)="parentValue=$event"/>
 </div>
 </body>

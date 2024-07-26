@@ -14,11 +14,6 @@ import {PercentPipe} from "@angular/common";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bindings-sync-project';
-  value = 10;
-  progressBarWidth = "width:" + this.value + "%";
+  parentValue = 10;
 
-  updateValue(value: number) {
-    this.value = value;
-  }
 }

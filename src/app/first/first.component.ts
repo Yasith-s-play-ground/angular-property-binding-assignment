@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-first',
@@ -8,9 +8,14 @@ import {Component} from '@angular/core';
   styleUrl: './first.component.css'
 })
 export class FirstComponent {
+  @Output("update")
+  emitter: EventEmitter<number> = new EventEmitter<number>();
+
+  @Input("value")
   firstCompValue = 10;
 
   updateValue(value: number) {
     this.firstCompValue = value;
+    this.emitter.emit(value);
   }
 }
