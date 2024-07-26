@@ -5,11 +5,12 @@ import {SecondComponent} from "./second/second.component";
 import {FourthComponent} from "./fourth/fourth.component";
 import {ThirdComponent} from "./third/third.component";
 import {PercentPipe} from "@angular/common";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FirstComponent, SecondComponent, FourthComponent, ThirdComponent, PercentPipe],
+  imports: [RouterOutlet, FirstComponent, SecondComponent, FourthComponent, ThirdComponent, PercentPipe, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

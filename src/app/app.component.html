@@ -7,11 +7,14 @@
   </div>
 </header>
 <div class="flex justify-center gap-x-20 mt-5">
-  <app-first [value]="parentValue" (update)="parentValue=$event"/>
-  <app-second [value]="parentValue" (update)="parentValue=$event"/>
+  <!--  <app-first [value]="parentValue" (update)="parentValue=$event"/>-->
+  <app-first [(value)]="parentValue"/> <!-- 2 way -->
+  <!--  <app-second [value]="parentValue" (update)="parentValue=$event"/>-->
+  <app-second [(value)]="parentValue"/>
 </div>
 <div class="flex justify-center gap-x-20 mt-5">
   <app-fourth [value]="parentValue"/>
-  <app-third [value]="parentValue" (update)="parentValue=$event"/>
+  <!--  <app-third [value]="parentValue" (update)="parentValue=$event"/>-->
+  <app-third [(value)]="parentValue"/>
 </div>
 </body>

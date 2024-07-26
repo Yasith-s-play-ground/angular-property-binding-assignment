@@ -8,7 +8,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrl: './first.component.css'
 })
 export class FirstComponent {
-  @Output("update")
+  @Output("valueChange")
   emitter: EventEmitter<number> = new EventEmitter<number>();
 
   @Input("value")

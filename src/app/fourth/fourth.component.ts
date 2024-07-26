@@ -13,10 +13,5 @@ import {NgStyle} from "@angular/common";
 export class FourthComponent {
   @Input("value")
   borderRadius = 0;
-  // borderRadiusStyle = "border-radius:" + this.borderRadius + "%";
 
-
-  // updateValue(value: number) {
-  //   this.borderRadius = value;
-  // }
 }
