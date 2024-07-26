@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind utilities;
+
+/*#progress-bar-container{*/
+/*  width: 80%;*/
+/*}*/
+
+div{
+  border-radius: ;
+}
